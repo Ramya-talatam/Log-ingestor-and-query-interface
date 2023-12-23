@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+      
+        strong {
+            color: #555;
+        }
+        form {
+            margin: 10px;
+            float: left;
+            background-color: #fff;
+            padding:0 40px 0 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        input {
+            display: block;
+            margin: 8px;
+            padding: 8px;
+            width: 150px;
+        }
+        button {
+            display: block;
+            padding: 8px;
+            margin: 4px;
+            cursor: pointer;
+            color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+        }
+        td, th {
+    border: 1px solid #777;
+    padding: 0.5rem;
+    text-align: center;
+}
+ 
+table {
+    border-collapse: collapse;
+}
+ 
+tbody tr:nth-child(odd) {
+    background: #eee;
+}
+caption {
+    font-size: 0.8rem;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Query Interface & Log Viewer:</h1>
+    
+    <form action="/filter_logs" method="get">
+        <button type="submit">Filter Logs</button>
+        <label for="level">Level:</label>
+        <input type="text" name="level" placeholder="Enter level">
+
+        <label for="message">Message:</label>
+        <input type="text" name="message" placeholder="Enter part of message">
+
+        <label for="resourceId">Resource ID:</label>
+        <input type="text" name="resourceId" placeholder="Enter resource ID">
+
+        <label for="timestamp">Timestamp:</label>
+        <input type="text" name="timestamp" placeholder="Enter timestamp">
+
+        <label for="traceId">Trace ID:</label>
+        <input type="text" name="traceId" placeholder="Enter trace ID">
+
+        <label for="spanId">Span ID:</label>
+        <input type="text" name="spanId" placeholder="Enter span ID">
+
+        <label for="commit">Commit:</label>
+        <input type="text" name="commit" placeholder="Enter commit">
+
+        <label for="parentResourceId">Parent Resource ID:</label>
+        <input type="text" name="parentResourceId" placeholder="Enter parent resource ID">
+
+        
+    </form>
+    
+    <!-- Display logs or filtered results -->
+    <p id="logs-list">Applied Search Filters: {{filter_query}}</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Level</th>
+                <th>Message</th>
+                <th>Timestamp</th>
+                <th>ResourceId</th>
+                <th>TraceId</th>
+                <th>SpanId</th>
+                <th>Commit</th>
+                <th>ParentResourceId</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for log in logs %}
+            <tr>
+                <td>{{ log['level'] }}</td>
+                <td>{{ log['message'] }}</td>
+                <td>{{ log['timestamp'] }}</td>
+                <td>{{ log['resourceId'] }}</td>
+                <td>{{ log['traceId'] }}</td>
+                <td>{{ log['spanId'] }}</td>
+                <td>{{ log['commit'] }}</td>
+                <td>{{ log['metadata']['parentResourceId'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
