@@ -1,54 +1,14 @@
 <!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
 <a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2sZOX9xt)
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">Log Ingestor and Query Interface</h3>
 
   <p align="center">
     This project provides a simple log ingestion system and querying interface built with Flask, html and MongoDB Atlas. It allows users to ingest logs over HTTP and query logs based on various criteria.
     <br />
-    <a href="https://github.com/dyte-submissions/november-2023-hiring-Ramya-talatam"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/dyte-submissions/november-2023-hiring-Ramya-talatam">View Demo</a>
-    ·
-    <a href="https://github.com/dyte-submissions/november-2023-hiring-Ramya-talatam/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/dyte-submissions/november-2023-hiring-Ramya-talatam/issues">Request Feature</a>
   </p>
 </div>
 
@@ -90,9 +50,9 @@ Log Querying:
 * The client interacts with the HTML interface, specifying criteria for log querying.
 * The HTML interface sends a GET request to /query_logs with query parameters.
 * The Flask server processes the query parameters, retrieves matching logs from the MongoDB collection, and returns the results to the client.
-* 
 ### System Design
 ![system_design_diagram](https://github.com/dyte-submissions/november-2023-hiring-Ramya-talatam/assets/108510824/601b0a80-1921-41ff-91c1-113310196ff1)
+<br/>
 Flask Web Server:
 * Log Ingestion Endpoint: Exposes an endpoint (/ingest_logs) to receive logs via HTTP POST requests.
 * Querying Interface Endpoint: Provides an endpoint (/query_logs) to query logs based on specified criteria.
@@ -211,8 +171,6 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 Ramya Talatam - (https://www.linkedin.com/in/ramya-talatam)
-
-Project Link: [github-repo](https://github.com/dyte-submissions/november-2023-hiring-Ramya-talatam)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
