@@ -34,7 +34,6 @@
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
@@ -167,10 +166,6 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTACT -->
-## Contact
-
-Ramya Talatam - (https://www.linkedin.com/in/ramya-talatam)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
