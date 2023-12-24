@@ -83,7 +83,6 @@ Follow the below instructions to set up and run the project locally.
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * python3
 * Flask==2.0.1
 * pymongo==3.12.1
